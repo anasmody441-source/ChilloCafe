@@ -1,4 +1,5 @@
 import { useId, type ReactNode } from 'react';
+import { assetUrl } from '../utils/assets';
 import { Modal } from './Modal';
 
 interface ConfirmDialogProps {
@@ -29,7 +30,7 @@ export function ConfirmDialog({
 
   return (
     <Modal open={open} onClose={onDismiss} labelledBy={titleId} className="confirm-dialog">
-      <img className="confirm-dialog__mark" src="/assets/branding/icon.svg" alt="" width="52" height="52" />
+      <img className="confirm-dialog__mark" src={assetUrl('/assets/branding/icon.svg')} alt="" width="52" height="52" />
       <h2 id={titleId} className="confirm-dialog__title">
         {title}
       </h2>

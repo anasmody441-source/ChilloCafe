@@ -1,6 +1,13 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
 import { predefinedProducts } from '../data/products';
 import type { NewProductInput, Product } from '../types/product';
+import { assetUrl } from '../utils/assets';
+
+/** The catalog stores root-relative paths so scripts/check-assets.ts can validate it outside Vite. */
+const catalog: readonly Product[] = predefinedProducts.map((product) => ({
+  ...product,
+  image: assetUrl(product.image),
+}));
 
 interface ProductsContextValue {
   products: readonly Product[];
@@ -36,7 +43,7 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo(
     () => ({
-      products: [...temporaryProducts, ...predefinedProducts],
+      products: [...temporaryProducts, ...catalog],
       temporaryCount: temporaryProducts.length,
       addProduct,
       removeTemporaryProduct,

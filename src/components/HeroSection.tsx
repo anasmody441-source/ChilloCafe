@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { site } from '../config/site';
+import { assetUrl } from '../utils/assets';
 import { Icon } from './Icon';
 import { Logo } from './Logo';
 
@@ -27,7 +28,7 @@ export function HeroSection() {
         <div className="hero__visual">
           <div className="arch hero__arch">
             <img
-              src="/assets/hero/hero-coffee.webp"
+              src={assetUrl('/assets/hero/hero-coffee.webp')}
               alt="فنجان قهوة أحمر بفن الحليب على طاولة داكنة"
               width="900"
               height="1125"

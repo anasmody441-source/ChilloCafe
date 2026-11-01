@@ -8,15 +8,16 @@ import { site } from '../config/site';
 import { useProducts } from '../context/ProductsContext';
 import { categoryLabels } from '../data/categories';
 import type { ProductCategory } from '../types/product';
+import { assetUrl } from '../utils/assets';
 
 const FEATURED_COUNT = 4;
 
 const categoryHighlights: { id: ProductCategory; image: string; alt: string }[] = [
-  { id: 'hot', image: '/assets/products/cappuccino.webp', alt: 'فنجان كابتشينو' },
-  { id: 'cold', image: '/assets/products/green-mojito.webp', alt: 'كوب موهيتو أخضر' },
-  { id: 'specialty', image: '/assets/products/pour-over.webp', alt: 'قهوة مقطّرة يدوياً' },
-  { id: 'desserts', image: '/assets/products/cheesecake.webp', alt: 'قطعة تشيز كيك' },
-  { id: 'snacks', image: '/assets/products/croissant.webp', alt: 'كرواسون' },
+  { id: 'hot', image: assetUrl('/assets/products/cappuccino.webp'), alt: 'فنجان كابتشينو' },
+  { id: 'cold', image: assetUrl('/assets/products/green-mojito.webp'), alt: 'كوب موهيتو أخضر' },
+  { id: 'specialty', image: assetUrl('/assets/products/pour-over.webp'), alt: 'قهوة مقطّرة يدوياً' },
+  { id: 'desserts', image: assetUrl('/assets/products/cheesecake.webp'), alt: 'قطعة تشيز كيك' },
+  { id: 'snacks', image: assetUrl('/assets/products/croissant.webp'), alt: 'كرواسون' },
 ];
 
 export function HomePage() {
@@ -68,7 +69,7 @@ export function HomePage() {
 
       <section className="section container intro">
         <div className="arch intro__image">
-          <img src="/assets/about/barista.webp" alt="تحضير القهوة على ماكينة الإسبريسو" width="900" height="1125" loading="lazy" decoding="async" />
+          <img src={assetUrl('/assets/about/barista.webp')} alt="تحضير القهوة على ماكينة الإسبريسو" width="900" height="1125" loading="lazy" decoding="async" />
         </div>
         <div className="intro__copy">
           <p className="eyebrow">

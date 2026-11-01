@@ -1,25 +1,26 @@
 import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { usePageVisible, usePrefersReducedMotion } from '../hooks/useMediaState';
+import { assetUrl } from '../utils/assets';
 import { Icon } from './Icon';
 
 const slides = [
   {
-    image: '/assets/slider/hot-coffee.webp',
+    image: assetUrl('/assets/slider/hot-coffee.webp'),
     alt: 'كوبان من اللاتيه بفن الحليب على طاولة خشبية',
     title: 'قهوة ساخنة بروح مختصة',
     text: 'إسبريسو غني ومشروبات دافئة تُحضَّر بعناية في كل مرة.',
     category: 'hot',
   },
   {
-    image: '/assets/slider/iced-drinks.webp',
+    image: assetUrl('/assets/slider/iced-drinks.webp'),
     alt: 'كوب بارد بالليمون والنعناع والثلج',
     title: 'انتعاش في كل كوب',
     text: 'مشروبات مثلجة تكسر حرارة اليوم بنكهات متوازنة.',
     category: 'cold',
   },
   {
-    image: '/assets/slider/desserts.webp',
+    image: assetUrl('/assets/slider/desserts.webp'),
     alt: 'قطعة تيراميسو مزيّنة بالشوكولاتة على طبق',
     title: 'حلويات تكمل قهوتك',
     text: 'لمسة حلوة مختارة لتكون الرفيق الأجمل لمشروبك.',

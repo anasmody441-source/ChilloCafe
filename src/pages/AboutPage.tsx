@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Icon, type IconName } from '../components/Icon';
+import { assetUrl } from '../utils/assets';
 
 const values: { icon: IconName; title: string; text: string }[] = [
   { icon: 'bean', title: 'جودة المكوّنات', text: 'نختار مكوناتنا بعناية، لأن الطعم الجميل يبدأ من الأساس.' },
@@ -22,7 +23,7 @@ export function AboutPage() {
             </p>
           </div>
           <div className="arch page-hero__arch">
-            <img src="/assets/about/cafe-interior.webp" alt="أجواء داخلية دافئة في مقهى" width="900" height="1125" />
+            <img src={assetUrl('/assets/about/cafe-interior.webp')} alt="أجواء داخلية دافئة في مقهى" width="900" height="1125" />
           </div>
         </div>
       </section>
@@ -62,7 +63,7 @@ export function AboutPage() {
 
       <section className="section container intro intro--reverse">
         <div className="arch intro__image">
-          <img src="/assets/about/coffee-beans.webp" alt="حبوب قهوة محمّصة" width="900" height="1125" loading="lazy" decoding="async" />
+          <img src={assetUrl('/assets/about/coffee-beans.webp')} alt="حبوب قهوة محمّصة" width="900" height="1125" loading="lazy" decoding="async" />
         </div>
         <div className="intro__copy">
           <p className="eyebrow">الجودة والضيافة</p>

@@ -26,7 +26,7 @@ export function App() {
   return (
     <ToastProvider>
       <ProductsProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route element={<PublicLayout />}>
               <Route index element={<HomePage />} />
