@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ChilloCafé">
+  <defs>
+    <linearGradient id="cup" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4d5a"/><stop offset="1" stop-color="#a4162a"/></linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#242222"/><stop offset="1" stop-color="#0b0b0b"/></linearGradient>
+  </defs>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="16" fill="url(#base)" stroke="#ffffff" stroke-opacity=".14" stroke-width="1.5"/>
+    <g transform="rotate(28 30 15.5)">
+      <ellipse cx="30" cy="15.5" rx="6.9" ry="9.6" fill="#f5f1ec"/>
+      <path d="M30 6.2c-3 3.4 3 6.2 0 9.3s3 5.9 0 9.3" fill="none" stroke="#141313" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+    <path d="M13.5 30.5h31v6.5a15.5 15.5 0 0 1-31 0z" fill="url(#cup)"/>
+    <path d="M44 33.5h2.5a5.25 5.25 0 0 1 0 10.5h-4.8" fill="none" stroke="url(#cup)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M14 56.5h30" stroke="#f5f1ec" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
